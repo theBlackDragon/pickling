@@ -90,7 +90,7 @@ package object internal {
     }
   }
 
-  private[pickling] implicit class RichFieldMirror(fm: FieldMirror) {
+  implicit class RichFieldMirror(fm: FieldMirror) {
     // workaround for SI-7464
     def forcefulSet(value: Any): Unit = {
       import java.lang.reflect.{Field => jField}
